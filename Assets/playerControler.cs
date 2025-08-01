@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playerControler : MonoBehaviour    
 {
+    public GameObject cameraObj;
     public inputs inputScript;
     public animationControler animationControler;
     public playerAnimations animationSet;
@@ -12,7 +13,8 @@ public class playerControler : MonoBehaviour
     public float speed;
     public GameObject spriteObject;
     public string direction;
-    
+    public float cameraSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,8 @@ public class playerControler : MonoBehaviour
         gameObject.transform.position += move;
 
         getAnimation();
+
+        updateCamera();
     }
 
     public void getAnimation()
@@ -84,5 +88,15 @@ public class playerControler : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public void updateCamera()
+    {
+        Vector3 diference = gameObject.transform.position - cameraObj.transform.position;
+        diference *= cameraSpeed*Time.deltaTime;
+        diference.z = 0;
+
+        cameraObj.transform.position += diference;
+
     }
 }

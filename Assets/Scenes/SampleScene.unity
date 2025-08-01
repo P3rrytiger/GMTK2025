@@ -150,8 +150,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81924894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.6374, y: -1.1115, z: 0.066854596}
-  m_LocalScale: {x: 0.7452, y: 10.660772, z: 1}
+  m_LocalPosition: {x: -2.16, y: -3.27, z: 0.066854596}
+  m_LocalScale: {x: 0.77940464, y: 2.042604, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 793009866}
@@ -283,8 +283,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157132522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3077, y: 3.74, z: 0.066854596}
-  m_LocalScale: {x: 21.7354, y: 0.9779, z: 1}
+  m_LocalPosition: {x: 7.18, y: 5.7, z: 0.066854596}
+  m_LocalScale: {x: 4.8643823, y: 2.2065337, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 793009866}
@@ -559,6 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36d4035d298de564b86d3fb3018f325b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraObj: {fileID: 519420028}
   inputScript: {fileID: 0}
   animationControler: {fileID: 0}
   animationSet: {fileID: 0}
@@ -567,6 +568,7 @@ MonoBehaviour:
   speed: 0.5
   spriteObject: {fileID: 0}
   direction: 
+  cameraSpeed: 2
 --- !u!199 &550496474
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5408,8 +5410,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850109031}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.67, y: -1.14, z: 0.066854596}
-  m_LocalScale: {x: 0.7452, y: 10.660772, z: 1}
+  m_LocalPosition: {x: 8.9482, y: 1.4117, z: 0.066854596}
+  m_LocalScale: {x: 2.6433086, y: 2.217043, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 793009866}
@@ -5616,8 +5618,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076112162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.02, y: -6.07, z: 0.066854596}
-  m_LocalScale: {x: 21.7354, y: 0.9779, z: 1}
+  m_LocalPosition: {x: 5.2394, y: -7.1006, z: 0.066854596}
+  m_LocalScale: {x: 22.213577, y: 0.49912018, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 793009866}
