@@ -48,6 +48,11 @@ public class inputs : MonoBehaviour
         calculateInput(inputX, KeyCode.LeftArrow, -1);
         calculateInput(inputY, KeyCode.UpArrow, 1);
         calculateInput(inputY, KeyCode.DownArrow, -1);
+
+        calculateInput(inputX, KeyCode.D, 1);
+        calculateInput(inputX, KeyCode.A, -1);
+        calculateInput(inputY, KeyCode.W, 1);
+        calculateInput(inputY, KeyCode.S, -1);
     }
 
     public void calculateInput(InputClass input, KeyCode button, int changeBy)

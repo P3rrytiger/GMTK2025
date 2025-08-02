@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerAnimations : MonoBehaviour
+public class SpriteSet : MonoBehaviour
+{
+    public List<Sprite> defaultSprite;
+}
+
+public class playerAnimations : SpriteSet
 {
 
     public List<Sprite> idleDown;
