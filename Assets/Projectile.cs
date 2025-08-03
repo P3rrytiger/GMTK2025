@@ -31,5 +31,12 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        otherThings();
+    }
+
+    public virtual void otherThings()
+    {
+
     }
 }

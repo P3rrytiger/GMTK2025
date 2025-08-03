@@ -12,5 +12,8 @@ public class Weapon : Projectile
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-   
+   public virtual void hitSomething()
+   {
+        Destroy(gameObject);
+   }
 }

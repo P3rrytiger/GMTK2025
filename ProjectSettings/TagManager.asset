@@ -6,6 +6,7 @@ TagManager:
   tags:
   - input Handlerer
   - sprites
+  - Player Projectile
   layers:
   - Default
   - TransparentFX

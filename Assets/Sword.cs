@@ -7,7 +7,7 @@ public class Sword : Weapon
     //public Vector3 debug;
     public bool isBoneXD;
     public float timer;
-    public int nps;
+    public float nps;
     public GameObject note;
     public float speed;
 
@@ -53,6 +53,7 @@ public class Sword : Weapon
                 theNoteThatWasJustFired.velocity = new Vector2(Mathf.Cos(gameObject.transform.eulerAngles.z*Mathf.PI/180), Mathf.Sin(gameObject.transform.eulerAngles.z * Mathf.PI / 180))*speed;
                 theNoteThatWasJustFired.despawnTime = 1;
                 theNoteThatWasJustFired.canDespawn = true;
+                //theNoteThatWasJustFired.velocity += player.GetComponent<playerControler>().velocity;
             }
         }
     }
@@ -69,5 +70,10 @@ public class Sword : Weapon
             gameObject.GetComponentInChildren<animationControler>().setAnimation(gameObject.GetComponent<SwordSprits>().swing);
         }
         player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    public override void hitSomething()
+    {
+        
     }
 }
