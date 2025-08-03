@@ -11,9 +11,9 @@ public class Animation{
     public float time;
     public bool active;
     public SpriteRenderer obj;
-    public int fps;
+    public float fps;
 
-    public Animation(SpriteRenderer obj, int fps)
+    public Animation(SpriteRenderer obj, float fps)
     {
         frame = 0;
         time = 0;
@@ -59,7 +59,7 @@ public class Animation{
 public class animationControler : MonoBehaviour
 {
     public Animation animation;
-    public int fps;
+    public float fps;
     // Start is called before the first frame update
     void Start()
     {
