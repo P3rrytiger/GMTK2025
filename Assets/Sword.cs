@@ -41,19 +41,20 @@ public class Sword : Weapon
         if (isBoneXD)
         {
             timer += Time.deltaTime * nps;
-            if (timer >= 1)
+            while (timer >= 1)
             {
                 timer -= 1;
 
 
 
 
-                Projectile theNoteThatWasJustFired = Instantiate(note, gameObject.transform.position, gameObject.transform.rotation).GetComponent<Projectile>();
+                Projectile theNoteThatWasJustFired = Instantiate(note, gameObject.transform.position, Quaternion.Euler(new Vector3(0,0,0))).GetComponent<Projectile>();
 
                 theNoteThatWasJustFired.velocity = new Vector2(Mathf.Cos(gameObject.transform.eulerAngles.z*Mathf.PI/180), Mathf.Sin(gameObject.transform.eulerAngles.z * Mathf.PI / 180))*speed;
                 theNoteThatWasJustFired.despawnTime = 1;
                 theNoteThatWasJustFired.canDespawn = true;
-                //theNoteThatWasJustFired.velocity += player.GetComponent<playerControler>().velocity;
+                theNoteThatWasJustFired.velocity += Pluey.toVector2(EnimySpawner.randomVector3(1)); 
+
             }
         }
     }

@@ -68,7 +68,7 @@ public class EnimySpawner : MonoBehaviour
         return output;
     }
 
-    public Vector3 randomVector3(float magnetude)
+    public static Vector3 randomVector3(float magnetude)
     {
         float direction = UnityEngine.Random.Range(0, Mathf.PI*2);
 

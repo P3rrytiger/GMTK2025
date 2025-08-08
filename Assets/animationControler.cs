@@ -56,8 +56,17 @@ public class Animation{
         }
     }
 }
+
+[Serializable]
+
+public class customeAnimation
+{
+    public List<Sprite> sprites;
+    public string name;
+}
 public class animationControler : MonoBehaviour
 {
+    public List<customeAnimation> customeAnimations;
     public Animation animation;
     public float fps;
     // Start is called before the first frame update
@@ -80,5 +89,16 @@ public class animationControler : MonoBehaviour
     public void setAnimation(List<Sprite> newAnimation)
     {
         animation.setAnimation(newAnimation);
+    }
+
+    public void setCustomeAnimation(string newAnimation)
+    {
+        foreach(customeAnimation obj in customeAnimations)
+        {
+            if(newAnimation == obj.name)
+            {
+                animation.setAnimation(obj.sprites);
+            }
+        }
     }
 }

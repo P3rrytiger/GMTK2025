@@ -6001,6 +6001,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a4dd374fe776a469f75075ab00c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customeAnimations:
+  - sprites: []
+    name: 
   animation:
     sprites: []
     frame: 0
@@ -6178,60 +6181,95 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1954354006
-PrefabInstance:
+--- !u!1 &1940260851
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4521671332835058224, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521671332835058224, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5960634
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521671332835058224, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.41687945
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521671332835058224, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.6015196
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521671332835058224, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521671332835058224, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521671332835058224, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521671332835058224, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521671332835058224, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521671332835058224, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521671332835058224, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521671332835058225, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
-      propertyPath: m_Name
-      value: Trombone
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1940260853}
+  - component: {fileID: 1940260855}
+  m_Layer: 0
+  m_Name: weapons controler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1940260853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940260851}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.65817153, y: 0.019268053, z: -64.74996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1940260855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940260851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad7c257a3d602043a158bcfa078bd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseEfect:
+    childEfects:
+    - rid: 2870849229945044998
+  references:
+    version: 2
+    RefIds:
+    - rid: 2870849229945044998
+      type: {class: trombone, ns: , asm: Assembly-CSharp}
+      data:
+        childEfects:
+        - rid: 2870849229945044999
+        - rid: 2870849229945045077
+        - rid: 2870849229945045080
+        - rid: 2870849229945045001
+        - rid: 2870849229945045078
+        - rid: 2870849229945045081
+        - rid: 2870849229945045002
+        weaponObjPrefab: {fileID: 4521671332835058225, guid: 1c3333264abe2d141ae5c335dd646fc3, type: 3}
+        weaponObj: {fileID: 0}
+        firingSpeed: 2.5
+    - rid: 2870849229945044999
+      type: {class: tBoneFieringSpeedUpbrade, ns: , asm: Assembly-CSharp}
+      data:
+        childEfects: []
+    - rid: 2870849229945045001
+      type: {class: tBoneFieringSpeedUpbrade, ns: , asm: Assembly-CSharp}
+      data:
+        childEfects: []
+    - rid: 2870849229945045002
+      type: {class: tBoneFieringSpeedUpbrade, ns: , asm: Assembly-CSharp}
+      data:
+        childEfects: []
+    - rid: 2870849229945045077
+      type: {class: tBoneFieringSpeedUpbrade, ns: , asm: Assembly-CSharp}
+      data:
+        childEfects: []
+    - rid: 2870849229945045078
+      type: {class: tBoneFieringSpeedUpbrade, ns: , asm: Assembly-CSharp}
+      data:
+        childEfects: []
+    - rid: 2870849229945045080
+      type: {class: tBoneFieringSpeedUpbrade, ns: , asm: Assembly-CSharp}
+      data:
+        childEfects: []
+    - rid: 2870849229945045081
+      type: {class: tBoneFieringSpeedUpbrade, ns: , asm: Assembly-CSharp}
+      data:
+        childEfects: []

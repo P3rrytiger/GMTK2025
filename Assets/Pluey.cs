@@ -30,7 +30,7 @@ public class Pluey : Enimy
         return (Mathf.Atan2(vector.y, vector.x) / Mathf.PI) * 180;
     }
 
-    public Vector2 toVector2(Vector3 vec)
+    public static Vector2 toVector2(Vector3 vec)
     {
         return new Vector2(vec.x, vec.y);
     }
