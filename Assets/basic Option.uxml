@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:GroupBox style="flex-shrink: initial; flex-grow: initial; flex-wrap: nowrap; flex-basis: auto;">
+        <ui:Label text="option1" display-tooltip-when-elided="true" />
+        <ui:Label text=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et." display-tooltip-when-elided="true" style="flex-wrap: wrap-reverse; flex-direction: column; -unity-text-align: upper-left; white-space: normal; -unity-background-scale-mode: stretch-to-fill; flex-shrink: initial; flex-grow: 0; max-width: none; max-height: none; min-width: auto; min-height: auto; flex-basis: auto; font-size: 12%;" />
+        <ui:Button text="Select" display-tooltip-when-elided="true" />
+    </ui:GroupBox>
+</ui:UXML>

@@ -7,6 +7,8 @@ TagManager:
   - input Handlerer
   - sprites
   - Player Projectile
+  - Weapon Handlerer
+  - Enimy Spawner
   layers:
   - Default
   - TransparentFX

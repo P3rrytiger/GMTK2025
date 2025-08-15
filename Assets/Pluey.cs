@@ -6,6 +6,9 @@ public class Pluey : Enimy
 {
     public GameObject player;
     public float speed;
+    public float justHit = 0;
+    public GameObject dieEffect;
+    public GameObject[] playerProjectiles;
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -14,13 +17,24 @@ public class Pluey : Enimy
 
     public override void otherThings()
     {
+        justHit -= Time.deltaTime * 10;
+
+        if (justHit > 0)
+        {
+            gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+        }
+        else
+        {
+            gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.white;
+        }
+
         float selfAngle = angle(toVector2(player.transform.position) - position);
 
         gameObject.transform.eulerAngles = new Vector3(0, 0, selfAngle);
 
         float selfRadiens = selfAngle * (Mathf.PI / 180);
 
-        velocity = new Vector2(Mathf.Cos(selfRadiens), Mathf.Sin(selfRadiens))*speed;
+        velocity =Vector2.Lerp(velocity, new Vector2(Mathf.Cos(selfRadiens), Mathf.Sin(selfRadiens))*speed, Time.deltaTime);
 
         amISecretlyDead();
     }
@@ -37,7 +51,8 @@ public class Pluey : Enimy
 
     public void amISecretlyDead()
     {
-        GameObject[] playerProjectiles = GameObject.FindGameObjectsWithTag("Player Projectile");
+        playerProjectiles = GameObject.FindGameObjectsWithTag("Player Projectile");
+        Debug.Log(playerProjectiles);
         
         Collider2D self = gameObject.GetComponent<Collider2D>();
 
@@ -47,10 +62,20 @@ public class Pluey : Enimy
             if (self.IsTouching(curent.colider))
             {
                 health -= curent.damage;
-                
+                justHit = 1;
 
-                if(health <= 0)
+                float selfAngle = angle(toVector2(player.transform.position) - position);
+
+                gameObject.transform.eulerAngles = new Vector3(0, 0, selfAngle);
+
+                float selfRadiens = selfAngle * (Mathf.PI / 180);
+
+                velocity = Vector2.Lerp(velocity, new Vector2(Mathf.Cos(selfRadiens), Mathf.Sin(selfRadiens)) * speed*-1, (float)4/5);
+
+
+                if (health <= 0)
                 {
+                    Instantiate(dieEffect, gameObject.transform.position, gameObject.transform.rotation);
                     Destroy(gameObject);
                 }
                 else

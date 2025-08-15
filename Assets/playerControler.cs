@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playerControler : MonoBehaviour    
 {
+    private Vector3 camVol;
     public GameObject cameraObj;
     public inputs inputScript;
     public animationControler animationControler;
@@ -92,11 +93,18 @@ public class playerControler : MonoBehaviour
 
     public void updateCamera()
     {
-        Vector3 diference = gameObject.transform.position - cameraObj.transform.position;
+        Vector3 diference = gameObject.transform.position - (cameraObj.transform.position+(camVol*Time.deltaTime*0));
         diference *= cameraSpeed*Time.deltaTime;
         diference.z = 0;
 
-        cameraObj.transform.position += diference;
+        camVol = diference;
+
+        //camVol *= Mathf.Pow((float)1 / 10, Time.deltaTime);
+        //camVol /= 10;
+
+        
+
+        cameraObj.transform.position += camVol;
 
     }
 }

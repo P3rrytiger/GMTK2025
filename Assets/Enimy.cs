@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Enimy : Projectile
 {
-    public int health;
+    public float health;
     public int damage;
 }

@@ -7,7 +7,8 @@ public class snake : Pluey
     public snakeAnimations sprites;
     public animationControler animationControler;
     public float timer;
-    public bool justImplementedPluey;
+    private bool justImplementedPluey;
+    //private bool justBeganImplementingPluey;
     public GameObject pluey;
     public override void Start()
     {
@@ -25,22 +26,30 @@ public class snake : Pluey
 
         if (timer >= 3)
         {
-            if (!justImplementedPluey)
+
+            if (justImplementedPluey)
             {
-                justImplementedPluey = true;
-                Instantiate(pluey, gameObject.transform.position, gameObject.transform.rotation);
+                gameObject.GetComponent<ParticleSystem>().Play();
             }
+            
             animationControler.setAnimation(sprites.attack);
+            justImplementedPluey = false;
 
             if (timer >= 5)
             {
-                timer = 0;
+                timer -= 5;
             }
         }
         else
         {
             animationControler.setAnimation(sprites.move);
-            justImplementedPluey = false;
+            
+
+            if (!justImplementedPluey)
+            {
+                justImplementedPluey = true;
+                Instantiate(pluey, gameObject.transform.position, gameObject.transform.rotation);
+            }
         }
     }
 }

@@ -14,6 +14,10 @@ public class Sword : Weapon
     // Update is called once per frame
     void Update()
     {
+        if (isBoneXD)
+        {
+            gameObject.GetComponentInChildren<animationControler>().setAnimation(gameObject.GetComponent<SwordSprits>().swing);
+        }
         //debug = Input.mousePosition;
         Vector2 diference = new Vector2(player.transform.position.x, player.transform.position.y) - position;
         //diference *= 1 * Time.deltaTime;
@@ -48,12 +52,15 @@ public class Sword : Weapon
 
 
 
-                Projectile theNoteThatWasJustFired = Instantiate(note, gameObject.transform.position, Quaternion.Euler(new Vector3(0,0,0))).GetComponent<Projectile>();
+                Weapon theNoteThatWasJustFired = Instantiate(note, gameObject.transform.position, Quaternion.Euler(new Vector3(0,0,0))).GetComponent<Weapon>();
 
                 theNoteThatWasJustFired.velocity = new Vector2(Mathf.Cos(gameObject.transform.eulerAngles.z*Mathf.PI/180), Mathf.Sin(gameObject.transform.eulerAngles.z * Mathf.PI / 180))*speed;
                 theNoteThatWasJustFired.despawnTime = 1;
                 theNoteThatWasJustFired.canDespawn = true;
-                theNoteThatWasJustFired.velocity += Pluey.toVector2(EnimySpawner.randomVector3(1)); 
+                theNoteThatWasJustFired.velocity += Pluey.toVector2(EnimySpawner.randomVector3(1));
+                theNoteThatWasJustFired.damage = damage;
+
+                //player.GetComponent<playerControler>().velocity -= new Vector2(Mathf.Cos(gameObject.transform.eulerAngles.z * Mathf.PI / 180), Mathf.Sin(gameObject.transform.eulerAngles.z * Mathf.PI / 180)) * speed;
 
             }
         }

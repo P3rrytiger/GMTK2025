@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a4dd374fe776a469f75075ab00c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customeAnimations: []
   animation:
     sprites: []
     frame: 0
@@ -232,7 +233,7 @@ MonoBehaviour:
   time: 0
   canDespawn: 0
   player: {fileID: 0}
-  damage: 5
+  damage: 2
   isBoneXD: 1
   timer: 0
   nps: 2.5

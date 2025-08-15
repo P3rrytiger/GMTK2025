@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : Projectile
 {
     public GameObject player;
-    public int damage;
+    public float damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,9 @@ public class Weapon : Projectile
 
    public virtual void hitSomething()
    {
-        Destroy(gameObject);
+        if (canDespawn)
+        {
+            Destroy(gameObject);
+        }
    }
 }

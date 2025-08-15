@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     public Vector2 velocity;
     public Collider2D colider;
     public SpriteSet sprite;
-    public int despawnTime;
+    public float despawnTime;
     public float time;
     public bool canDespawn;
 
